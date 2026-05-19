@@ -18,6 +18,7 @@
     "nps"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Deck",
     "shortDescription": "Turn Deck feedback into product decisions.",
