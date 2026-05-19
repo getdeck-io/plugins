@@ -1,0 +1,39 @@
+{
+  "name": "deck-plugins",
+  "owner": {
+    "name": "Deck",
+    "email": "matt.teixeira@getdeck.io"
+  },
+  "metadata": {
+    "description": "Deck plugins for product discovery, roadmap planning, initiative briefs, launch monitoring, feedback digests, and NPS analysis."
+  },
+  "plugins": [
+    {
+      "name": "deck",
+      "source": "./claude-code-plugin",
+      "description": "Deck's skills plugin for improving products with customer feedback.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Deck",
+        "email": "matt.teixeira@getdeck.io"
+      },
+      "homepage": "https://getdeck.io",
+      "repository": "https://github.com/getdeck-io/plugins",
+      "license": "MIT",
+      "keywords": [
+        "research",
+        "user feedback",
+        "product management",
+        "roadmap",
+        "nps"
+      ],
+      "category": "Productivity",
+      "tags": [
+        "feedback",
+        "roadmap",
+        "initiatives",
+        "nps"
+      ]
+    }
+  ]
+}
