@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deck Roadmap Opportunity Review"
+  short_description: "Surface roadmap opportunities from Deck feedback."
+  default_prompt: "Find roadmap opportunities for my team."

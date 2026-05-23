@@ -36,9 +36,17 @@ claude mcp add --transport http deck https://mcp.getdeck.io/mcp
 
 ## Codex
 
-Deck is packaged for the Codex plugin marketplace with a root-level `.codex-plugin/plugin.json`.
-Once Deck is listed in the Codex marketplace, install it from the Codex plugins interface by
-searching for `Deck`.
+Add the marketplace:
+
+```bash
+codex plugin marketplace add getdeck-io/plugins
+```
+
+Install the Deck plugin:
+
+```bash
+codex plugin add deck@deck-plugins
+```
 
 The plugin includes the Deck MCP server configuration:
 
@@ -70,7 +78,9 @@ In Deck, an org admin must enable MCP access from **Settings -> MCP** before too
 
 - `.claude-plugin/plugin.json` is the Claude Code plugin manifest.
 - `.claude-plugin/marketplace.json` is the Claude marketplace entrypoint.
-- `.codex-plugin/plugin.json` is the Codex plugin manifest.
-- `.mcp.json` contains the Deck MCP server configuration.
-- `assets/` contains shared plugin artwork.
-- `skills/` contains the shared Deck plugin skills.
+- `.codex-plugin/plugin.json` is the root standalone Codex plugin manifest.
+- `.agents/plugins/marketplace.json` is the Codex marketplace entrypoint.
+- `plugins/deck/.codex-plugin/plugin.json` is the Codex plugin manifest.
+- `plugins/deck/.mcp.json` contains the Deck MCP server configuration for Codex.
+- `assets/` and `skills/` contain the root plugin payload used by Claude Code.
+- `plugins/deck/assets/` and `plugins/deck/skills/` contain the Codex plugin payload.

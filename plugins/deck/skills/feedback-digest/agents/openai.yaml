@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deck Weekly Feedback Digest"
+  short_description: "Summarize Deck feedback into a weekly digest."
+  default_prompt: "Create a weekly feedback digest for my segment."
