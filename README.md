@@ -1,6 +1,6 @@
 # Deck Plugins
 
-Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, prioritisation, roadmap opportunity review, initiative briefs, launch monitoring, weekly feedback digests, and NPS breakdowns.
+Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative briefs, weekly feedback digests, and NPS breakdowns.
 
 ## Claude Code
 
@@ -36,13 +36,9 @@ claude mcp add --transport http deck https://mcp.getdeck.io/mcp
 
 ## Codex
 
-Add the marketplace:
-
-```bash
-codex plugin marketplace add getdeck-io/plugins
-```
-
-Then install Deck from the Codex plugins interface.
+Deck is packaged for the Codex plugin marketplace with a root-level `.codex-plugin/plugin.json`.
+Once Deck is listed in the Codex marketplace, install it from the Codex plugins interface by
+searching for `Deck`.
 
 The plugin includes the Deck MCP server configuration:
 
@@ -72,7 +68,9 @@ In Deck, an org admin must enable MCP access from **Settings -> MCP** before too
 
 ## Contents
 
-- `claude-code-plugin/` contains the Claude Code plugin manifest and skills.
-- `codex-plugin/` contains the Codex plugin manifest, skill metadata, and skills.
+- `.claude-plugin/plugin.json` is the Claude Code plugin manifest.
 - `.claude-plugin/marketplace.json` is the Claude marketplace entrypoint.
-- `.agents/plugins/marketplace.json` is the Codex marketplace entrypoint.
+- `.codex-plugin/plugin.json` is the Codex plugin manifest.
+- `.mcp.json` contains the Deck MCP server configuration.
+- `assets/` contains shared plugin artwork.
+- `skills/` contains the shared Deck plugin skills.

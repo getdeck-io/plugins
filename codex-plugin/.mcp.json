@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "deck": {
-      "type": "http",
-      "url": "https://mcp.getdeck.io/mcp"
-    }
-  }
-}

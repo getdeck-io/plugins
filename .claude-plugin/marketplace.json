@@ -5,12 +5,12 @@
     "email": "matt.teixeira@getdeck.io"
   },
   "metadata": {
-    "description": "Deck plugins for product discovery, roadmap planning, initiative briefs, launch monitoring, feedback digests, and NPS analysis."
+    "description": "Deck plugins for product discovery, feedback analysis, roadmap planning, initiative briefs, feedback digests, and NPS analysis."
   },
   "plugins": [
     {
       "name": "deck",
-      "source": "./claude-code-plugin",
+      "source": "./",
       "description": "Deck's skills plugin for improving products with customer feedback.",
       "version": "0.1.0",
       "author": {

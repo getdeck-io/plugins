@@ -1,4 +1,0 @@
-interface:
-  display_name: "Deck Launch Feedback Monitor"
-  short_description: "Check post-launch feedback for a shipped initiative."
-  default_prompt: "Monitor feedback since this initiative shipped."
