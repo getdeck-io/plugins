@@ -11,15 +11,22 @@ Create a useful PM/design digest that summarizes what customers are saying, what
 
 ## Intake
 
-Ask the user for:
+Ask only for missing context that materially changes the digest. Keep intake lightweight: if the user gives a clear scope, proceed and state assumptions briefly. If the request is broad, ask 2-3 targeted questions before querying Deck.
 
+- Team, audience, or function the digest is for, such as PM, design, research, support, GTM, or leadership
 - Segment, vertical, persona, or product area to focus on
 - Specific theme, pain point, opportunity, or initiative to include
 - Digest period, defaulting to the last 7 days for new activity
 - Historical comparison window, defaulting to the last 12 months
 - Whether the digest should optimize for exec summary, product planning, design discovery, or support follow-up
 
-If the user says "everything," still ask whether they want a segment or focus area. Deck feedback is more useful when scoped.
+If the user says "everything," still ask whether they want a segment, product area, or audience lens. Deck feedback is more useful when scoped.
+
+Good first questions when context is missing:
+
+- "Who is this digest for, and what team or customer segment should it focus on?"
+- "Should I optimize for an executive summary, product planning, design discovery, or support follow-up?"
+- "Do you want just this week's changes, or a comparison against a longer baseline?"
 
 ## Evidence Gathering
 
@@ -33,17 +40,19 @@ Pull together the main Deck evidence surfaces:
 - NPS score, drivers, and segment movement
 - Newly created or changed records in the digest period
 
-When operating inside the Deck app repo, useful source anchors include:
+Use the actual Deck MCP server tools for evidence gathering:
 
-- `packages/agent-chat/src/tools/search-feedback-tool.ts`
-- `packages/agent-chat/src/tools/query-themes-tool.ts`
-- `packages/agent-chat/src/tools/query-subthemes-tool.ts`
-- `packages/agent-chat/src/tools/query-insights-tool.ts`
-- `packages/agent-chat/src/tools/query-segments-tool.ts`
-- `packages/agent-chat/src/tools/query-nps-tool.ts`
-- `apps/web/app/(app)/[slug]/(app)/visualize/themes/page.tsx`
-- `apps/web/app/(app)/[slug]/(app)/build/opportunity-backlog/page.tsx`
-- `apps/web/app/(app)/[slug]/(app)/build/initiatives/page.tsx`
+- `select_organization` when organization context is ambiguous or an `org_id` must be validated
+- `get_overview` for organization context, top themes, recent activity, and available segments
+- `explore_insights` with `since`, `query`, `theme_id`, `segment_id`, `category`, and `sentiment` filters for digest-period changes and evidence
+- `explore_themes` for theme volume, sentiment/category breakdowns, and segment distribution
+- `explore_subthemes` for detailed clusters inside themes
+- `explore_opportunity_backlog` for active opportunity backlog entries and evidence
+- `explore_build_initiatives` for initiatives linked to the digest scope
+- `explore_nps` for NPS summary, respondent groups, trends, and recommendations
+- `read_transcript` for original customer language behind representative insights
+- `list_sources` to understand source mix and recent feedback sources
+- `get_platform_links` only when a needed Deck URL is not already present in tool results
 
 ## Analysis
 

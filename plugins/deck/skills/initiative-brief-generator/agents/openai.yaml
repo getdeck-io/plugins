@@ -1,4 +1,0 @@
-interface:
-  display_name: "Deck Initiative Brief Generator"
-  short_description: "Draft initiative outlines with supporting evidence from Deck."
-  default_prompt: "Generate an initiative brief from this evidence."

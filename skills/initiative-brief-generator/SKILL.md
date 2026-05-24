@@ -11,28 +11,41 @@ Create a concise initiative brief that combines an actionable outline with the c
 
 ## Intake
 
-Collect only the fields needed to generate a useful brief:
+Collect only the fields needed to generate a useful brief. Keep intake lightweight: if the user gives enough context to start, proceed and state assumptions briefly. If the request is broad, ask 2-3 targeted questions before querying Deck.
 
 - Initiative name, link, ID, or draft text
+- Team, product area, or owner the brief is for
 - Product area, segment, persona, or vertical
+- Problem space, customer job, or product interest behind the initiative
 - Desired business or product outcome
 - Evidence sources to include or exclude
 - Intended brief shape, such as PRD, roadmap one-pager, exec summary, or launch brief
 
 If the user is already on or referencing an initiative page, infer the initiative context from that link or ID before asking for more.
 
-## Deck Source Anchors
+Good first questions when context is missing:
 
-When operating inside the Deck app repo, prefer these source areas:
+- "What initiative, product area, or customer segment should this brief focus on?"
+- "What decision should the brief support: shaping scope, justifying priority, aligning stakeholders, or preparing launch?"
+- "Should I include all relevant evidence, or focus on a specific customer group or pain point?"
 
-- `apps/web/app/(app)/[slug]/(app)/build/initiatives/[id]/page.tsx`
-- `apps/web/app/(app)/[slug]/(app)/build/initiatives/[id]/_components/GenerateInitiativeModal.tsx`
-- `apps/deck-agents/src/lib/initiatives/generate-initiative.ts`
-- `apps/deck-agents/src/lib/initiatives/dossier-discovery.ts`
-- `apps/deck-agents/src/lib/initiatives/prompts.ts`
-- `apps/deck-agents/src/lib/initiatives/schema.ts`
-- `packages/agent-chat/src/tools/mutate-initiative-build-tool.ts`
-- `packages/agent-chat/src/tools/mutate-opportunity-build-tool.ts`
+## Deck MCP Tools
+
+Use the actual Deck MCP server tools to resolve the initiative and gather evidence:
+
+- `select_organization` when organization context is ambiguous or an `org_id` must be validated
+- `explore_build_initiatives` to list initiatives, search by title/slug, or fetch full initiative detail by `initiative_id`
+- `explore_opportunity_backlog` to inspect related opportunities and their evidence
+- `get_overview` to understand company context, top themes, recent insights, and available segments
+- `explore_insights` to find supporting and opposing customer evidence
+- `explore_themes` to understand parent themes, sentiment/category breakdowns, and segment distribution
+- `explore_subthemes` to add granular customer problem clusters
+- `explore_nps` to include NPS drivers, detractor/promoter context, and recommendations when relevant
+- `read_transcript` to verify original customer language and context behind key insights
+- `list_sources` to cite source mix and identify source material
+- `get_platform_links` only when a needed Deck URL is not already present in tool results
+- `mutate_initiative_build` only when the user explicitly asks to create or update the initiative in Build
+- `mutate_opportunity_build` only when the user explicitly asks to mutate an opportunity or create an initiative from one
 
 Use Deck feedback, themes, insights, subthemes, opportunities, and NPS evidence when available. Do not rely only on the initiative title.
 

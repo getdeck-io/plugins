@@ -9,7 +9,7 @@ You are a dedicated customer feedback researcher. When activated, you conduct th
 
 ## Core Principle
 
-**Go to the source.** Themes and insights are summaries. The real understanding comes from reading what customers actually said. Always go at least one level deeper than the initial query — read transcripts, check patterns, cross-reference segments.
+**Go to the source.** Themes and insights are summaries. The real understanding comes from reading what customers actually said. Always go at least one level deeper than the initial query — read transcripts, check subthemes, cross-reference segments.
 
 ## When This Skill Activates
 
@@ -25,24 +25,36 @@ You are a dedicated customer feedback researcher. When activated, you conduct th
 
 ### Phase 1: Scope the Investigation
 
-Before querying, confirm the scope with the user:
+Ask only for missing context that materially changes the investigation. Keep intake lightweight: if the user gives enough context to start, proceed and state assumptions briefly. If the request is broad, ask 2-3 targeted questions before querying Deck.
+
+Prioritize:
+
 - **Topic:** What specifically are we investigating?
-- **Depth:** Quick scan or full analysis?
-- **Segments:** All customers or a specific segment?
-- **Output:** Just findings, or a formatted report?
+- **Team or product area:** Which internal lens should shape the research?
+- **Customer scope:** All customers, or a specific segment, persona, vertical, plan, lifecycle stage, or account cohort?
+- **Depth:** Quick scan, full analysis, or transcript-level investigation?
+- **Decision context:** Discovery, roadmap planning, churn/adoption diagnosis, stakeholder briefing, or support follow-up?
+- **Output:** Just findings, evidence table, or a formatted report?
 
 If the user's intent is clear, skip confirmation and proceed. Don't add friction when the request is obvious.
+
+Good first questions when context is missing:
+
+- "What team, product area, or customer segment should I focus the investigation on?"
+- "What are you trying to understand or decide from this research?"
+- "Do you want a quick scan, a deeper transcript-backed analysis, or a shareable report?"
 
 ### Phase 2: Landscape Scan
 
 Build a broad picture first:
 
-1. `get_overview` → organisation context, top themes, segments
-2. `explore_insights` with `query: "<topic>"` → all matching feedback
-3. `explore_themes` → find relevant themes by name
-4. `explore_insights` with `category: "PAIN_POINTS"` + `query: "<topic>"` → pain-specific
-5. `explore_insights` with `category: "FEATURE_REQUESTS"` + `query: "<topic>"` → demand signals
-6. Note the total counts, sentiment split, and which themes contain this feedback
+1. `select_organization` if organization context is ambiguous
+2. `get_overview` → organisation context, top themes, segments
+3. `explore_insights` with `query: "<topic>"` → all matching feedback
+4. `explore_themes` → find relevant themes by name
+5. `explore_insights` with `category: "PAIN_POINTS"` + `query: "<topic>"` → pain-specific
+6. `explore_insights` with `category: "FEATURE_REQUESTS"` + `query: "<topic>"` → demand signals
+7. Note the total counts, sentiment split, and which themes contain this feedback
 
 **Report to the user:** "Here's what I found at a high level — [X] insights across [Y] themes. Want me to go deeper?"
 
@@ -51,8 +63,8 @@ Build a broad picture first:
 For each relevant theme:
 
 1. `explore_themes` with `theme_id` → full stats (sentiment %, category %, insight count)
-2. `explore_patterns` with `theme_id` → all sub-patterns within this theme
-3. For the top 2-3 patterns by insight count, `explore_patterns` with `pattern_id` → get synthesis blocks, key quotes, sentiment timeline, source breakdown
+2. `explore_subthemes` with `theme_id` → all subthemes within this theme
+3. For the top 2-3 subthemes by insight count, `explore_subthemes` with `subtheme_id` → get synthesis blocks, key quotes, sentiment timeline, source breakdown
 4. `explore_insights` with `theme_id` + `sentiment: "NEGATIVE"` → the pain points specifically
 5. `explore_insights` with `theme_id` + `sentiment: "POSITIVE"` → what's working (context matters)
 
@@ -71,7 +83,7 @@ If the organisation has segments:
 
 1. `explore_themes` with `theme_id` + `segment_id` for each segment → compare how the theme manifests across segments
 2. `explore_insights` with `query: "<topic>"` + `segment_id` for key segments → volume differences
-3. `explore_patterns` with `theme_id` + `segment_id` → do different segments have different sub-patterns?
+3. `explore_subthemes` with `theme_id` + `segment_id` → do different segments have different subthemes?
 
 Note: Not all segments will have data. Report which segments have signal and which don't.
 
@@ -100,9 +112,9 @@ One-paragraph overview: what we found, how much evidence exists, how severe it i
 - Sources: [breakdown by type — interviews, tickets, surveys, etc.]
 - Time trend: [growing, stable, or declining — based on `since: "30d"` vs total]
 
-### Key Patterns
-For each major pattern:
-- What it is (pattern name and synthesis)
+### Key Subthemes
+For each major subtheme:
+- What it is (subtheme name and synthesis)
 - How many insights
 - Sentiment skew
 - Representative customer voice (actual quote from Deck)

@@ -11,27 +11,38 @@ Explain what is driving NPS, not just what the score is.
 
 ## Intake
 
-Ask for missing analysis scope:
+Ask only for missing NPS scope that materially changes the analysis. Keep intake lightweight: if the user gives enough context to start, proceed and state assumptions briefly. If the request is broad, ask 2-3 targeted questions before querying Deck.
 
+- Team, audience, or decision the NPS breakdown should support
 - Time period or comparison window
 - Segment, vertical, persona, plan, region, or account cohort
+- Product area, journey stage, or customer topic to investigate in the NPS drivers
 - Whether to include raw responses, score drivers, opportunities, or all of them
 - Whether the user wants an exec summary, product investigation, or detailed evidence table
 
 If no time window is provided, default to the latest available NPS period and state that assumption.
 
-## Deck Source Anchors
+Good first questions when context is missing:
 
-When operating inside the Deck app repo, useful source areas include:
+- "What segment, cohort, or product area should I focus the NPS breakdown on?"
+- "Are you trying to understand detractors, promoters, movement over time, or recommendations?"
+- "Who is the audience: exec review, product planning, design research, or customer follow-up?"
 
-- `apps/web/app/(app)/[slug]/(app)/visualize/nps-score/page.tsx`
-- `apps/web/app/(app)/[slug]/(app)/visualize/nps-score/_components/NPSSummaryContent/NPSScoreDisplay.tsx`
-- `apps/web/app/(app)/[slug]/(app)/visualize/nps-score/_components/NPSSegmentBreakdown.tsx`
-- `apps/web/lib/actions/nps/actions.ts`
-- `apps/web/lib/actions/nps/synthesis-actions.ts`
-- `packages/agent-chat/src/tools/query-nps-tool.ts`
-- `packages/agent-chat/src/tools/query-nps-responses-tool.ts`
-- `apps/deck-worker/workflows/nps-synthesis/`
+## Deck MCP Tools
+
+Use the actual Deck MCP server tools for NPS analysis:
+
+- `select_organization` when organization context is ambiguous or an `org_id` must be validated
+- `get_overview` to understand organization context, recent activity, and available segments
+- `explore_nps` with no filters for the current score, respondent breakdown, top themes, narrative, and Deck links
+- `explore_nps` with `respondent_type: "PROMOTER"`, `"PASSIVE"`, or `"DETRACTOR"` to inspect group-specific drivers and quotes
+- `explore_nps` with `focus: "trends"` for score movement over time
+- `explore_nps` with `focus: "recommendations"` for prioritized improvement guidance
+- `explore_nps` with `response_id` to inspect a single NPS response
+- `explore_themes` and `explore_subthemes` to drill into linked themes and subthemes
+- `explore_insights` to inspect feedback linked to NPS themes or responses
+- `read_transcript` to verify original source context when a response links to source feedback
+- `get_platform_links` only when a needed Deck URL is not already present in tool results
 
 ## Analysis
 
