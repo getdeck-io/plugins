@@ -41,6 +41,11 @@
     ],
     "brandColor": "#060606",
     "composerIcon": "./assets/logo.png",
-    "logo": "./assets/logo.png"
+    "logo": "./assets/logo.png",
+    "screenshots": [
+      "./assets/codex/codex-1.png",
+      "./assets/codex/codex-2.png",
+      "./assets/codex/codex-3.png"
+    ]
   }
 }
