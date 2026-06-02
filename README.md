@@ -1,5 +1,7 @@
 # Deck Plugins
 
+These plugins are valuable only if you have a [Deck](https://getdeck.io) account with customer feedback in Deck.
+
 Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative briefs, weekly feedback digests, and NPS breakdowns.
 
 ## Claude Code
