@@ -1,5 +1,5 @@
 ---
-name: deck-initiative-brief-generator
+name: initiative-brief-generator
 description: Generate Deck initiative briefs from an initiative page, link, prompt, or evidence set. Use when users want an initiative outline, evidence summary, customer problem, scope, success metrics, or launch narrative for initiatives.
 ---
 

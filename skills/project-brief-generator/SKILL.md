@@ -1,5 +1,5 @@
 ---
-name: deck-project-brief-generator
+name: project-brief-generator
 description: Use when users want a Deck Project brief from a Project page, link, prompt, external Jira or Linear reference, or evidence set, including Project outline, customer problem, evidence summary, execution scope, success metrics, risks, handoff note, or launch narrative for Build Projects.
 ---
 

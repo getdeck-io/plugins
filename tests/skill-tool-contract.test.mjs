@@ -46,7 +46,7 @@ test("project brief skill names current Project MCP tools and is listed", async 
     "utf8",
   );
 
-  assert.match(skill, /^name: deck-project-brief-generator$/m);
+  assert.match(skill, /^name: project-brief-generator$/m);
 
   for (const toolName of [
     "list_projects",
@@ -59,7 +59,7 @@ test("project brief skill names current Project MCP tools and is listed", async 
     assert.ok(skill.includes(`\`${toolName}\``));
   }
 
-  assert.match(readme, /`deck-project-brief-generator`/);
+  assert.match(readme, /`project-brief-generator`/);
   assert.match(codexPlugin, /Project brief/);
   assert.match(claudeMarketplace, /Project briefs/);
 });
