@@ -31,11 +31,14 @@ Good first questions when context is missing:
 
 ## Deck MCP Tools
 
-Use the actual Deck MCP server tools to resolve the initiative and gather evidence:
+Use the actual Deck MCP server tools to resolve the initiative, related Projects, and supporting evidence:
 
 - `select_organization` when organization context is ambiguous or an `org_id` must be validated
-- `explore_build_initiatives` to list initiatives, search by title/slug, or fetch full initiative detail by `initiative_id`
-- `explore_opportunity_backlog` to inspect related opportunities and their evidence
+- `list_initiatives` to list or search initiatives by title, status, owner, segment, or associated Project
+- `explore_build_initiatives` to fetch full initiative detail by `initiative_id`
+- `list_projects` to list or search Build Projects by title, status, owner, initiative, segment, or Jira/Linear metadata
+- `explore_build_projects` to fetch full Project detail by `project_id`
+- `explore_opportunity_backlog` to inspect related opportunities, linked Projects, and their evidence
 - `get_overview` to understand company context, top themes, recent insights, and available segments
 - `explore_insights` to find supporting and opposing customer evidence
 - `explore_themes` to understand parent themes, sentiment/category breakdowns, and segment distribution
@@ -46,12 +49,13 @@ Use the actual Deck MCP server tools to resolve the initiative and gather eviden
 - `get_platform_links` only when a needed Deck URL is not already present in tool results
 - `mutate_initiative_build` only when the user explicitly asks to create or update the initiative in Build
 - `mutate_opportunity_build` only when the user explicitly asks to mutate an opportunity or create an initiative from one
+- `mutate_project_build` only when the user explicitly asks to create, update, archive, move, link external artifacts, assign evidence, or generate an evidence story for a Build Project
 
 Use Deck feedback, themes, insights, subthemes, opportunities, and NPS evidence when available. Do not rely only on the initiative title.
 
 ## Workflow
 
-1. Resolve the initiative context.
+1. Resolve the initiative and related Project context.
 2. Gather supporting evidence and opposing evidence.
 3. Identify the user problem and the customer segment affected.
 4. Draft the initiative outline.

@@ -22,13 +22,13 @@
   "interface": {
     "displayName": "Deck",
     "shortDescription": "Turn Deck feedback into product decisions.",
-    "longDescription": "Deck's skills plugin for product teams: discovery support, feedback analysis, prioritisation, roadmap opportunity review, initiative brief generation, weekly feedback digests, and NPS breakdowns.",
+    "longDescription": "Deck's skills plugin for product teams: discovery support, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project brief generation, weekly feedback digests, and NPS breakdowns.",
     "developerName": "Deck",
     "category": "Productivity",
     "capabilities": [
       "Analyze feedback",
       "Plan roadmaps",
-      "Generate initiative briefs",
+      "Generate initiative and Project briefs",
       "Summarize NPS"
     ],
     "websiteURL": "https://getdeck.io",
