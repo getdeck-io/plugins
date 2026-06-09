@@ -38,8 +38,37 @@ claude mcp add --transport http deck https://mcp.getdeck.io/mcp
 
 ## Codex
 
-The Codex plugin payload lives at the repository root, matching the root-layout
-plugin structure used by projects such as `obra/superpowers`.
+Install the plugin from this repository with Codex's plugin commands. First add this GitHub repo as a Codex marketplace source:
+
+```bash
+codex plugin marketplace add getdeck-io/plugins --ref main
+```
+
+You can use the full Git URL instead if you prefer:
+
+```bash
+codex plugin marketplace add https://github.com/getdeck-io/plugins.git --ref main
+```
+
+Then install the `deck` plugin from the `deck-plugins` marketplace snapshot:
+
+```bash
+codex plugin add deck@deck-plugins
+```
+
+If Codex already has an older snapshot of this repository, refresh it before installing:
+
+```bash
+codex plugin marketplace upgrade deck-plugins
+```
+
+If the old source still points somewhere else, remove and re-add this repository:
+
+```bash
+codex plugin marketplace remove deck-plugins
+codex plugin marketplace add getdeck-io/plugins --ref main
+codex plugin add deck@deck-plugins
+```
 
 The plugin includes the Deck MCP server configuration:
 
