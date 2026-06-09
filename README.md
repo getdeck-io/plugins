@@ -4,6 +4,10 @@ These plugins are valuable only if you have a [Deck](https://getdeck.io) account
 
 Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project briefs, weekly feedback digests, and NPS breakdowns.
 
+For the complete documentation, please go to [Deck plugin docs](https://docs.getdeck.io/docs/integrations/deck-plugin).
+
+To install the skills in Claude Chat, find the skills on [Deck AI skills](https://getdeck.io/resources/ai-skills).
+
 ## Claude Code
 
 Add the marketplace:
