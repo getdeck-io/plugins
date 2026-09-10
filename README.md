@@ -2,7 +2,7 @@
 
 These plugins are valuable only if you have a [Deck](https://getdeck.io) account with customer feedback in Deck.
 
-Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project briefs, weekly feedback digests, and NPS breakdowns.
+Deck plugins for Claude Code, Codex, and Grok Build. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project briefs, weekly feedback digests, and NPS breakdowns.
 
 For the complete documentation, please go to [Deck plugin docs](https://docs.getdeck.io/docs/integrations/deck-plugin).
 
@@ -100,6 +100,72 @@ codex mcp add deck --url https://mcp.getdeck.io/mcp
 
 In Deck, an org admin must enable MCP access from **Settings -> MCP** before tools can read feedback. Deck MCP uses browser OAuth; users do not need API keys.
 
+## Grok Build
+
+The plugin is the repo root. Grok reads `.grok-plugin/marketplace.json` and `.grok-plugin/plugin.json`.
+
+### Local test (use this before the official marketplace listing)
+
+From a clone of this repository, with [Grok Build](https://x.ai/build) installed and `grok login` completed:
+
+```bash
+grok plugin validate .
+grok plugin install . --trust
+```
+
+Or install through the local marketplace index, which is the same path Grok uses when browsing a catalog:
+
+```bash
+grok plugin marketplace add .
+grok plugin install deck --trust
+```
+
+Confirm the plugin loaded, then enable it if it is still off (Grok leaves plugins disabled until you turn them on):
+
+```bash
+grok plugin list
+grok plugin enable deck
+grok plugin details deck
+grok inspect
+```
+
+You can also press `Space` on `deck` in the `/plugins` tab. On first Deck tool use, Grok opens browser OAuth for `https://mcp.getdeck.io/mcp`. You can start that flow from `/mcps` by selecting the `deck` server and pressing `i`. Confirm the server:
+
+```bash
+grok mcp list
+```
+
+If you need to add the server manually:
+
+```bash
+grok mcp add --transport http deck https://mcp.getdeck.io/mcp
+```
+
+In Deck, an org admin must enable MCP access from **Settings -> MCP** before tools can read feedback. Users do not need API keys.
+
+Try a prompt that should hit Deck, for example:
+
+```text
+Use Deck to find patterns with the worst sentiment.
+```
+
+Checklist:
+
+- `grok plugin validate .` succeeds
+- `deck` appears in `grok plugin list` as installed, enabled, and trusted
+- `grok plugin details deck` lists the skills and the `deck` MCP server
+- Browser OAuth completes against Deck (`/mcps`, then `i` on the `deck` server)
+- A discovery, feedback, or NPS prompt returns Deck evidence rather than a missing-tool error
+
+### GitHub install
+
+You can also add this repository as a marketplace source without waiting for the official xAI catalog:
+
+```bash
+grok plugin marketplace add getdeck-io/plugins
+grok plugin install deck --trust
+```
+
 ## Skills
 
 | Skill | Description | Example prompt |
@@ -116,5 +182,7 @@ In Deck, an org admin must enable MCP access from **Settings -> MCP** before too
 - `.claude-plugin/plugin.json` is the Claude Code plugin manifest.
 - `.claude-plugin/marketplace.json` is the Claude marketplace entrypoint.
 - `.codex-plugin/plugin.json` is the Codex plugin manifest.
-- `.mcp.json` contains the Deck MCP server configuration for Codex.
+- `.grok-plugin/plugin.json` is the Grok Build plugin manifest.
+- `.grok-plugin/marketplace.json` is the Grok marketplace entrypoint used for local and GitHub installs.
+- `.mcp.json` contains the Deck MCP server configuration.
 - `assets/` and `skills/` contain the shared plugin payload.

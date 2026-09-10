@@ -1,0 +1,22 @@
+{
+  "name": "deck",
+  "version": "0.1.0",
+  "description": "Deck customer-feedback plugin for Grok Build. Analyze themes and insights, prioritize roadmap options, generate initiative and Project briefs, and break down NPS using Deck's hosted MCP server.",
+  "author": {
+    "name": "Deck",
+    "email": "matt.teixeira@getdeck.io",
+    "url": "https://getdeck.io"
+  },
+  "homepage": "https://getdeck.io",
+  "repository": "https://github.com/getdeck-io/plugins",
+  "license": "MIT",
+  "keywords": [
+    "deck",
+    "getdeck",
+    "deck feedback",
+    "deck nps",
+    "deck mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

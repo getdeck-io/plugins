@@ -1,0 +1,39 @@
+{
+  "name": "deck-plugins",
+  "description": "Deck plugins for Grok Build: product discovery, feedback analysis, roadmap planning, initiative and Project briefs, and NPS analysis.",
+  "owner": {
+    "name": "Deck",
+    "email": "matt.teixeira@getdeck.io"
+  },
+  "plugins": [
+    {
+      "name": "deck",
+      "description": "Deck customer-feedback plugin for Grok Build. Analyze themes and insights, prioritize roadmap options, generate initiative and Project briefs, and break down NPS using Deck's hosted MCP server.",
+      "category": "productivity",
+      "version": "0.1.0",
+      "author": {
+        "name": "Deck",
+        "email": "matt.teixeira@getdeck.io"
+      },
+      "source": {
+        "type": "local",
+        "path": "./"
+      },
+      "homepage": "https://getdeck.io",
+      "repository": "https://github.com/getdeck-io/plugins",
+      "license": "MIT",
+      "keywords": [
+        "deck",
+        "getdeck",
+        "deck feedback",
+        "deck nps",
+        "deck mcp"
+      ],
+      "domains": [
+        "getdeck.io",
+        "mcp.getdeck.io",
+        "docs.getdeck.io"
+      ]
+    }
+  ]
+}

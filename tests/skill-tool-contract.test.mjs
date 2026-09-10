@@ -45,6 +45,10 @@ test("project brief skill names current Project MCP tools and is listed", async 
     join(repoRoot, ".claude-plugin/marketplace.json"),
     "utf8",
   );
+  const grokMarketplace = await readFile(
+    join(repoRoot, ".grok-plugin/marketplace.json"),
+    "utf8",
+  );
 
   assert.match(skill, /^name: project-brief-generator$/m);
 
@@ -62,4 +66,40 @@ test("project brief skill names current Project MCP tools and is listed", async 
   assert.match(readme, /`project-brief-generator`/);
   assert.match(codexPlugin, /Project brief/);
   assert.match(claudeMarketplace, /Project briefs/);
+  assert.match(grokMarketplace, /Project briefs/);
+});
+
+test("grok plugin manifests are ready for local marketplace install", async () => {
+  const plugin = JSON.parse(
+    await readFile(join(repoRoot, ".grok-plugin/plugin.json"), "utf8"),
+  );
+  const marketplace = JSON.parse(
+    await readFile(join(repoRoot, ".grok-plugin/marketplace.json"), "utf8"),
+  );
+  const mcp = JSON.parse(await readFile(join(repoRoot, ".mcp.json"), "utf8"));
+  const readme = await readFile(join(repoRoot, "README.md"), "utf8");
+
+  assert.equal(plugin.name, "deck");
+  assert.equal(plugin.license, "MIT");
+  assert.equal(plugin.skills, "./skills/");
+  assert.equal(plugin.mcpServers, "./.mcp.json");
+  assert.equal(mcp.mcpServers.deck.type, "http");
+  assert.equal(mcp.mcpServers.deck.url, "https://mcp.getdeck.io/mcp");
+
+  assert.equal(marketplace.name, "deck-plugins");
+  assert.equal(marketplace.plugins.length, 1);
+  const entry = marketplace.plugins[0];
+  assert.equal(entry.name, "deck");
+  assert.equal(entry.category, "productivity");
+  assert.equal(entry.source.type, "local");
+  assert.equal(entry.source.path, "./");
+  assert.ok(entry.domains.includes("getdeck.io"));
+  assert.ok(entry.domains.includes("mcp.getdeck.io"));
+  assert.ok(entry.domains.includes("docs.getdeck.io"));
+  for (const keyword of entry.keywords) {
+    assert.match(keyword, /deck/i);
+  }
+
+  assert.match(readme, /grok plugin validate \./);
+  assert.match(readme, /grok plugin install \. --trust/);
 });
