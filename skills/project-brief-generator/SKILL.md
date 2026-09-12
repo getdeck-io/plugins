@@ -1,13 +1,13 @@
 ---
 name: project-brief-generator
-description: Use when users want a Deck Project brief from a Project page, link, prompt, external Jira or Linear reference, or evidence set, including Project outline, customer problem, evidence summary, execution scope, success metrics, risks, handoff note, or launch narrative for Build Projects.
+description: Turn a chosen Deck problem into delivery-ready Project scope. Use when users want a Project brief from a Project page, link, prompt, external Jira or Linear reference, or evidence set, including Project outline, customer problem, evidence summary, execution scope, success metrics, risks, handoff note, or launch narrative for Build Projects.
 ---
 
 # Deck Project Brief Generator
 
 ## Goal
 
-Create a concise Project brief that connects execution scope to the customer evidence behind it.
+Turn the chosen problem into a concise, delivery-ready Project brief that connects execution scope to the customer evidence behind it.
 
 ## Intake
 

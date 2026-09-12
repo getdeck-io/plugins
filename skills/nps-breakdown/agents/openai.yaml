@@ -1,4 +1,4 @@
 interface:
   display_name: "NPS Breakdown"
-  short_description: "Analyze NPS score, segments, and evidence."
-  default_prompt: "Break down NPS for this segment."
+  short_description: "Check whether the product is improving, and what to fix first."
+  default_prompt: "Break down NPS and tell me what to improve first."

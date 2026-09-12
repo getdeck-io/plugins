@@ -1,13 +1,13 @@
 ---
 name: initiative-brief-generator
-description: Generate Deck initiative briefs from an initiative page, link, prompt, or evidence set. Use when users want an initiative outline, evidence summary, customer problem, scope, success metrics, or launch narrative for initiatives.
+description: Turn a chosen Deck problem into an initiative the team can run. Use when users want an initiative outline, evidence summary, customer problem, scope, success metrics, or launch narrative from an initiative page, link, prompt, or evidence set.
 ---
 
 # Deck Initiative Brief Generator
 
 ## Goal
 
-Create a concise initiative brief that combines an actionable outline with the customer evidence behind it.
+Turn the chosen problem into a concise initiative the team can run, with the customer evidence behind it.
 
 ## Intake
 

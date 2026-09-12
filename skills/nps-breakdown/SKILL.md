@@ -1,13 +1,13 @@
 ---
 name: nps-breakdown
-description: Analyze Deck NPS results. Use when users ask for NPS score, promoter/passive/detractor breakdowns, segment-specific NPS, score drivers, linked opportunities, feedback evidence, or NPS changes over time.
+description: Check whether the product is improving, and what to fix first. Use when users ask for NPS score, promoter/passive/detractor breakdowns, segment-specific NPS, score drivers, linked opportunities, feedback evidence, NPS changes over time, or what to improve next.
 ---
 
 # NPS Breakdown
 
 ## Goal
 
-Explain what is driving NPS, not just what the score is.
+Explain what is driving NPS, not just what the score is — then say what the AI PM should improve first.
 
 ## Intake
 
@@ -82,6 +82,8 @@ Recommended next step:
 ```
 
 For segment tables, include score, response count, and the strongest driver for each segment.
+
+`Recommended next step` should name the highest-leverage improvement and the Deck action that follows (investigate, rank, or draft an initiative or Project).
 
 ## Guardrails
 

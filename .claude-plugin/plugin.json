@@ -1,7 +1,7 @@
 {
   "name": "deck",
-  "description": "Deck's skills plugin for improving products with customer feedback.",
-  "version": "0.1.0",
+  "description": "Deck in your coding agent — the AI PM that Autonomously Improves your Product.",
+  "version": "0.1.1",
   "author": {
     "name": "Deck",
     "email": "matt.teixeira@getdeck.io"
@@ -10,9 +10,9 @@
   "repository": "https://github.com/getdeck-io/plugins",
   "license": "MIT",
   "keywords": [
-    "research",
-    "user feedback",
+    "ai pm",
     "product management",
+    "product improvement",
     "roadmap",
     "nps"
   ],

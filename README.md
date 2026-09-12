@@ -1,8 +1,8 @@
 # Deck Plugins
 
-These plugins are valuable only if you have a [Deck](https://getdeck.io) account with customer feedback in Deck.
+These plugins are valuable only if you have a [Deck](https://getdeck.io) account with product signal in Deck.
 
-Deck plugins for Claude Code, Codex, and Grok Build. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project briefs, weekly feedback digests, and NPS breakdowns.
+Deck plugins for Claude Code, Codex, and Grok Build. They put Deck — the AI PM that Autonomously Improves your Product — in your coding agent, so it can run the loop from customer signal to prioritized action: discovery, ranking, initiative and Project briefs, and NPS.
 
 For the complete documentation, please go to [Deck plugin docs](https://docs.getdeck.io/docs/integrations/deck-plugin).
 
@@ -146,7 +146,7 @@ In Deck, an org admin must enable MCP access from **Settings -> MCP** before too
 Try a prompt that should hit Deck, for example:
 
 ```text
-Use Deck to find patterns with the worst sentiment.
+What's the highest-leverage problem in Deck right now, and what should we act on?
 ```
 
 Checklist:
@@ -170,12 +170,12 @@ grok plugin install deck --trust
 
 | Skill | Description | Example prompt |
 | --- | --- | --- |
-| `discovery-partner` | Grounds early product discovery, idea validation, problem exploration, and "what should we build next?" conversations in Deck themes, insights, segments, and customer evidence. | "What should we work on next for onboarding? Ground it in Deck feedback and include the strongest customer evidence." |
-| `feedback-analyst` | Runs deeper customer feedback investigations across Deck data, including themes, insights, transcripts, segments, source types, churn reasons, adoption blockers, and satisfaction drivers. | "Deep dive into why enterprise customers are churning. Read source feedback and summarize themes, segments, quotes, and open questions." |
-| `initiative-brief-generator` | Turns an initiative link, prompt, page, or evidence set into a concise initiative brief with customer problem, target segment, scope, success metrics, risks, and evidence appendix. | "Generate an initiative brief for improving CSV import reliability using Deck evidence, including scope, non-goals, success metrics, and risks." |
-| `project-brief-generator` | Turns a Project link, external Jira/Linear reference, prompt, page, or evidence set into a concise Project brief with customer problem, scope, execution notes, success metrics, risks, and evidence appendix. | "Generate a Project brief for the Linear-linked onboarding cleanup work using Deck evidence, including scope, non-goals, execution notes, and risks." |
-| `nps-breakdown` | Explains NPS results by calculating promoter, passive, and detractor breakdowns, segment-level scores, score drivers, related opportunities, representative feedback, and movement over time. | "Break down NPS for Enterprise accounts this quarter, including promoter, passive, and detractor counts, drivers, related opportunities, and representative feedback." |
-| `prioritisation-advisor` | Helps product teams compare roadmap options using Deck evidence such as feedback volume, sentiment, segment concentration, feature requests, NPS impact, recency, and customer quotes. | "Compare billing flexibility, onboarding templates, and reporting exports for the next roadmap cycle. Rank them using Deck evidence and call out missing data." |
+| `discovery-partner` | Finds the highest-leverage problem to work on, using Deck themes, insights, segments, and customer evidence. | "What should we work on next for onboarding? Ground it in Deck evidence and recommend the next action." |
+| `feedback-analyst` | Investigates a problem in depth before the AI PM acts — themes, transcripts, segments, churn reasons, adoption blockers, and satisfaction drivers. | "Deep dive into why enterprise customers are churning. Read source evidence and summarize themes, segments, quotes, and what we should do next." |
+| `initiative-brief-generator` | Turns the chosen problem into an initiative the team can run, with customer problem, target segment, scope, success metrics, risks, and evidence appendix. | "Generate an initiative brief for improving CSV import reliability using Deck evidence, including scope, non-goals, success metrics, and risks." |
+| `project-brief-generator` | Turns the chosen problem into delivery-ready Project scope, with execution notes, success metrics, risks, and evidence appendix. | "Generate a Project brief for the Linear-linked onboarding cleanup work using Deck evidence, including scope, non-goals, execution notes, and risks." |
+| `nps-breakdown` | Checks whether the product is improving, and what to fix first — promoter/passive/detractor breakdowns, drivers, related opportunities, and movement over time. | "Break down NPS for Enterprise accounts this quarter, including promoter, passive, and detractor counts, drivers, and what to improve first." |
+| `prioritisation-advisor` | Ranks what to act on next and says why, using volume, sentiment, segment concentration, feature requests, NPS impact, recency, and quotes. | "Compare billing flexibility, onboarding templates, and reporting exports for the next roadmap cycle. Rank them using Deck evidence and recommend the next action." |
 
 ## Contents
 

@@ -1,7 +1,7 @@
 {
   "name": "deck",
-  "version": "0.1.0",
-  "description": "Deck customer-feedback plugin for Grok Build. Analyze themes and insights, prioritize roadmap options, generate initiative and Project briefs, and break down NPS using Deck's hosted MCP server.",
+  "version": "0.1.1",
+  "description": "Deck in Grok Build — the AI PM that Autonomously Improves your Product. Find the highest-leverage problem, rank what to act on, draft initiative and Project briefs, and check NPS.",
   "author": {
     "name": "Deck",
     "email": "matt.teixeira@getdeck.io",
@@ -13,7 +13,7 @@
   "keywords": [
     "deck",
     "getdeck",
-    "deck feedback",
+    "deck ai pm",
     "deck nps",
     "deck mcp"
   ],
