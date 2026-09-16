@@ -5,14 +5,14 @@
     "email": "matt.teixeira@getdeck.io"
   },
   "metadata": {
-    "description": "Deck plugins for Claude Code: run the loop from customer signal to prioritized action — discovery, ranking, initiative and Project briefs, and NPS."
+    "description": "Deck plugins for Claude Code: run the loop from customer signal to prioritized action — discovery, ranking, initiative and Project briefs, NPS, and Competitors."
   },
   "plugins": [
     {
       "name": "deck",
       "source": "./",
       "description": "Deck in your coding agent — the AI PM that Autonomously Improves your Product.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Deck",
         "email": "matt.teixeira@getdeck.io"
@@ -25,14 +25,16 @@
         "product management",
         "product improvement",
         "roadmap",
-        "nps"
+        "nps",
+        "competitors"
       ],
       "category": "Productivity",
       "tags": [
         "ai-pm",
         "roadmap",
         "initiatives",
-        "nps"
+        "nps",
+        "competitors"
       ]
     }
   ]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitive Analyst"
+  short_description: "Turn competitor-customer signal into a ranked next action."
+  default_prompt: "What should we steal from our competitors, and should we put it on the backlog?"

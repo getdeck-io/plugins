@@ -1,7 +1,7 @@
 {
   "name": "deck",
   "description": "Deck in your coding agent — the AI PM that Autonomously Improves your Product.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Deck",
     "email": "matt.teixeira@getdeck.io"
@@ -14,7 +14,8 @@
     "product management",
     "product improvement",
     "roadmap",
-    "nps"
+    "nps",
+    "competitors"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"

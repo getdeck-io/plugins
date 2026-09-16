@@ -1,6 +1,6 @@
 {
   "name": "deck-plugins",
-  "description": "Deck plugins for Grok Build: run the loop from customer signal to prioritized action — discovery, ranking, initiative and Project briefs, and NPS.",
+  "description": "Deck plugins for Grok Build: run the loop from customer signal to prioritized action — discovery, ranking, initiative and Project briefs, NPS, and Competitors.",
   "owner": {
     "name": "Deck",
     "email": "matt.teixeira@getdeck.io"
@@ -8,9 +8,9 @@
   "plugins": [
     {
       "name": "deck",
-      "description": "Deck in Grok Build — the AI PM that Autonomously Improves your Product. Find the highest-leverage problem, rank what to act on, draft initiative and Project briefs, and check NPS.",
+      "description": "Deck in Grok Build — the AI PM that Autonomously Improves your Product. Find the highest-leverage problem, rank what to act on, draft initiative and Project briefs, check NPS, and analyse Competitors.",
       "category": "productivity",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Deck",
         "email": "matt.teixeira@getdeck.io"
@@ -27,6 +27,7 @@
         "getdeck",
         "deck ai pm",
         "deck nps",
+        "deck competitors",
         "deck mcp"
       ],
       "domains": [

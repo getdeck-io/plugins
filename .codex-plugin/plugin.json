@@ -1,6 +1,6 @@
 {
   "name": "deck",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Deck in your coding agent — the AI PM that Autonomously Improves your Product.",
   "author": {
     "name": "Deck",
@@ -15,21 +15,23 @@
     "product management",
     "product improvement",
     "roadmap",
-    "nps"
+    "nps",
+    "competitors"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Deck",
     "shortDescription": "Your AI PM in the editor — signal in, prioritized action out.",
-    "longDescription": "Runs Deck's improvement loop in Codex: find the highest-leverage problem, rank what to act on, draft initiative and Project briefs, and check NPS.",
+    "longDescription": "Runs Deck's improvement loop in Codex: find the highest-leverage problem, rank what to act on, draft initiative and Project briefs, check NPS, and analyse Competitors.",
     "developerName": "Deck",
     "category": "Productivity",
     "capabilities": [
       "Find highest-leverage problems",
       "Rank what to act on",
       "Generate initiative and Project briefs",
-      "Check whether it worked (NPS)"
+      "Check whether it worked (NPS)",
+      "Analyse Competitors"
     ],
     "websiteURL": "https://getdeck.io",
     "privacyPolicyURL": "https://getdeck.io/privacy-policy",
@@ -37,7 +39,8 @@
     "defaultPrompt": [
       "What's the highest-leverage problem in Deck right now, and what should we act on?",
       "Rank these options and recommend the next action using Deck evidence.",
-      "Break down NPS and tell me what to improve first."
+      "Break down NPS and tell me what to improve first.",
+      "What should we steal from our competitors, and should we put it on the backlog?"
     ],
     "brandColor": "#060606",
     "composerIcon": "./assets/logo.png",

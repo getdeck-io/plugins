@@ -2,7 +2,7 @@
 
 These plugins are valuable only if you have a [Deck](https://getdeck.io) account with product signal in Deck.
 
-Deck plugins for Claude Code, Codex, and Grok Build. They put Deck — the AI PM that Autonomously Improves your Product — in your coding agent, so it can run the loop from customer signal to prioritized action: discovery, ranking, initiative and Project briefs, and NPS.
+Deck plugins for Claude Code, Codex, and Grok Build. They put Deck — the AI PM that Autonomously Improves your Product — in your coding agent, so it can run the loop from customer signal to prioritized action: discovery, ranking, initiative and Project briefs, NPS, and Competitors.
 
 For the complete documentation, please go to [Deck plugin docs](https://docs.getdeck.io/docs/integrations/deck-plugin).
 
@@ -155,7 +155,7 @@ Checklist:
 - `deck` appears in `grok plugin list` as installed, enabled, and trusted
 - `grok plugin details deck` lists the skills and the `deck` MCP server
 - Browser OAuth completes against Deck (`/mcps`, then `i` on the `deck` server)
-- A discovery, feedback, or NPS prompt returns Deck evidence rather than a missing-tool error
+- A discovery, feedback, NPS, or Competitors prompt returns Deck evidence rather than a missing-tool error
 
 ### GitHub install
 
@@ -175,6 +175,7 @@ grok plugin install deck --trust
 | `initiative-brief-generator` | Turns the chosen problem into an initiative the team can run, with customer problem, target segment, scope, success metrics, risks, and evidence appendix. | "Generate an initiative brief for improving CSV import reliability using Deck evidence, including scope, non-goals, success metrics, and risks." |
 | `project-brief-generator` | Turns the chosen problem into delivery-ready Project scope, with execution notes, success metrics, risks, and evidence appendix. | "Generate a Project brief for the Linear-linked onboarding cleanup work using Deck evidence, including scope, non-goals, execution notes, and risks." |
 | `nps-breakdown` | Checks whether the product is improving, and what to fix first — promoter/passive/detractor breakdowns, drivers, related opportunities, and movement over time. | "Break down NPS for Enterprise accounts this quarter, including promoter, passive, and detractor counts, drivers, and what to improve first." |
+| `competitive-analyst` | Turns public competitor-customer signal into a ranked next action — what to steal, defend, or promote onto the backlog. | "What should we steal from Rival's onboarding, and should we put it on the backlog?" |
 | `prioritisation-advisor` | Ranks what to act on next and says why, using volume, sentiment, segment concentration, feature requests, NPS impact, recency, and quotes. | "Compare billing flexibility, onboarding templates, and reporting exports for the next roadmap cycle. Rank them using Deck evidence and recommend the next action." |
 
 ## Contents
