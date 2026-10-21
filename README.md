@@ -2,7 +2,7 @@
 
 These plugins are valuable only if you have a [Deck](https://getdeck.io) account with customer feedback in Deck.
 
-Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project briefs, weekly feedback digests, and NPS breakdowns.
+Deck plugins for Claude Code and Codex. These plugins help product teams use Deck customer feedback for discovery, feedback analysis, prioritisation, roadmap opportunity review, initiative and Project briefs, weekly feedback digests, NPS breakdowns, and competitor intelligence.
 
 For the complete documentation, please go to [Deck plugin docs](https://docs.getdeck.io/docs/integrations/deck-plugin).
 
@@ -109,6 +109,7 @@ In Deck, an org admin must enable MCP access from **Settings -> MCP** before too
 | `initiative-brief-generator` | Turns an initiative link, prompt, page, or evidence set into a concise initiative brief with customer problem, target segment, scope, success metrics, risks, and evidence appendix. | "Generate an initiative brief for improving CSV import reliability using Deck evidence, including scope, non-goals, success metrics, and risks." |
 | `project-brief-generator` | Turns a Project link, external Jira/Linear reference, prompt, page, or evidence set into a concise Project brief with customer problem, scope, execution notes, success metrics, risks, and evidence appendix. | "Generate a Project brief for the Linear-linked onboarding cleanup work using Deck evidence, including scope, non-goals, execution notes, and risks." |
 | `nps-breakdown` | Explains NPS results by calculating promoter, passive, and detractor breakdowns, segment-level scores, score drivers, related opportunities, representative feedback, and movement over time. | "Break down NPS for Enterprise accounts this quarter, including promoter, passive, and detractor counts, drivers, related opportunities, and representative feedback." |
+| `competitor-intelligence` | Analyzes Deck Competitors research: competitor strengths and weaknesses, opportunity teasers, quotes from review sites and social threads, and periodic check-in changes. On request, starts research, adds competitors, promotes findings to the Opportunity Backlog, or schedules check-ins. | "What do our competitors do well, and where can we win? Include quotes and link the strongest opportunities." |
 | `prioritisation-advisor` | Helps product teams compare roadmap options using Deck evidence such as feedback volume, sentiment, segment concentration, feature requests, NPS impact, recency, and customer quotes. | "Compare billing flexibility, onboarding templates, and reporting exports for the next roadmap cycle. Rank them using Deck evidence and call out missing data." |
 
 ## Contents

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitor Intelligence"
+  short_description: "Analyze competitor strengths, weaknesses, and opportunities."
+  default_prompt: "What do our competitors do well, and where can we win?"

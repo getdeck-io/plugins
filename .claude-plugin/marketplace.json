@@ -5,7 +5,7 @@
     "email": "matt.teixeira@getdeck.io"
   },
   "metadata": {
-    "description": "Deck plugins for product discovery, feedback analysis, roadmap planning, initiative and Project briefs, feedback digests, and NPS analysis."
+    "description": "Deck plugins for product discovery, feedback analysis, roadmap planning, initiative and Project briefs, feedback digests, NPS analysis, and competitor intelligence."
   },
   "plugins": [
     {
@@ -32,7 +32,8 @@
         "feedback",
         "roadmap",
         "initiatives",
-        "nps"
+        "nps",
+        "competitors"
       ]
     }
   ]

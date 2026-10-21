@@ -63,3 +63,34 @@ test("project brief skill names current Project MCP tools and is listed", async 
   assert.match(codexPlugin, /Project brief/);
   assert.match(claudeMarketplace, /Project briefs/);
 });
+
+test("competitor skill names current Competitors MCP tools and is listed", async () => {
+  const skill = await readFile(
+    join(repoRoot, "skills/competitor-intelligence/SKILL.md"),
+    "utf8",
+  );
+  const readme = await readFile(join(repoRoot, "README.md"), "utf8");
+  const codexPlugin = await readFile(
+    join(repoRoot, ".codex-plugin/plugin.json"),
+    "utf8",
+  );
+
+  assert.match(skill, /^name: competitor-intelligence$/m);
+
+  for (const toolName of ["explore_competitors", "mutate_competitors"]) {
+    assert.ok(skill.includes(`\`${toolName}\``));
+  }
+
+  for (const action of [
+    "start_research",
+    "add_competitor",
+    "promote_to_opportunity",
+    "assign_competitor_insights",
+    "set_checkins",
+  ]) {
+    assert.ok(skill.includes(`"${action}"`));
+  }
+
+  assert.match(readme, /`competitor-intelligence`/);
+  assert.match(codexPlugin, /competitor intelligence/);
+});
